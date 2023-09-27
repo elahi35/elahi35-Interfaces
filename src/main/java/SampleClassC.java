@@ -16,10 +16,11 @@
  * the compareTo method.
  */
 
-public class SampleClassC implements Comparable<SampleClassC>{
+public class SampleClassC implements Comparable<SampleClassC> {
     int val;
+
     /**
-     * TODO: implement compareTo for this class
+     * Implement compareTo for this class.
      *
      * CompareTo should return a negative value if this object's 'val' is less than another object's 'val',
      * and positive otherwise. If 'val' is equal for both objects, return 0.
@@ -27,7 +28,13 @@ public class SampleClassC implements Comparable<SampleClassC>{
      * @param other another object of type SampleClassC, which we are comparing to 'this' object.
      */
     public int compareTo(SampleClassC other) {
-        return 0;
+        if (this.val < other.val) {
+            return -1; // this.val is less than other.val
+        } else if (this.val > other.val) {
+            return 1;  // this.val is greater than other.val
+        } else {
+            return 0;  // this.val is equal to other.val
+        }
     }
-
 }
+
